@@ -1,0 +1,67 @@
+﻿html, body 
+{
+   height: 100%; 
+}
+
+body 
+{
+    background-image:url('../../Public/Images/background-body.png');   
+}
+
+#wrap {
+    height: auto !important;
+    margin: 0 auto -60px;
+    min-height: 100%;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#footer {
+    background-color: #F5F5F5;
+}
+
+#push, #footer {
+    height: 60px;
+}
+
+
+.clearfix:after, .section:after, .fixed:after, .row:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+#layout {
+    box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.2);
+    
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+
+.col1 {
+    width: 80px;
+}
+.col2 {
+    width: 130px;
+}
+.col3 
+{
+    width: 180px;
+}
+.box {
+    background: none repeat scroll 0 0 #D8D5D2;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    font-size: 11px;
+    line-height: 1.4em;
+    margin: 5px;
+    padding: 5px;
+    width: 120px;
+}
