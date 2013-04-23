@@ -122,7 +122,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AboutMeController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,6 +244,7 @@
     <Content Include="Public\images\background-body.png" />
     <Content Include="Public\images\background.jpg" />
     <Content Include="Public\images\background_container.jpg" />
+    <Content Include="Public\images\background_leather_black.jpg" />
     <Content Include="Public\images\blockquote_border.png" />
     <Content Include="Public\images\blockquote_quotes.png" />
     <Content Include="Public\images\blog_readmore.png" />
@@ -284,6 +288,7 @@
     <Content Include="Public\images\search_icon.png" />
     <Content Include="Public\images\separator_01.png" />
     <Content Include="Public\images\separator_01s.png" />
+    <Content Include="Public\images\separator_03.png" />
     <Content Include="Public\images\skills.png" />
     <Content Include="Public\images\small_icons.png" />
     <Content Include="Public\images\social_icons.png" />
@@ -481,6 +486,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\HTMLHelper.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Menu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AboutMe\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,29 @@
+﻿@{ 
+    var controller = ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString();
+
+    var classAboutMe = "normal-page";
+    var classHome = "normal-page";
+    var classBlog = "normal-page";
+    var classPortfolio = "normal-page";
+    
+    if (controller == "Home") {
+        classHome = "current-page";
+    }  
+    else if (controller == "AboutMe") {
+        classAboutMe = "current-page";
+    }
+    else if (controller == "Blog") {
+        classBlog = "current-page";
+    }
+    else if (controller == "Portfolio") {
+        classPortfolio = "current-page";
+    }
+} 
+
+<ul class="navigation">
+    <li class="@classAboutMe"><a class="nav-aboutme" href="@Url.Action("Index","AboutMe")"><span>ABOUT ME</span></a></li>
+    <li class="@classHome"><a class="nav-home" href="@Url.Action("Index","Home")"><span>HOME</span></a></li>
+    <li class="@classBlog"><a class="nav-blog" href="@Url.Action("Index","Blog")"><span>BLOG</span></a></li>
+    <li class="@classPortfolio"><a class="nav-portfolio" href="@Url.Action("Index","Portfolio")"><span>PORTFOLIO</span></a></li>
+</ul>
+

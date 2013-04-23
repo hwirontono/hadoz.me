@@ -18,19 +18,9 @@
         <div class="template-container">
             <!-- Content -->
             <div class="content">
-                <ul class="navigation">
-                    <li class="normal-page"><a class="nav-aboutme" href="about.html"><span>ABOUT ME</span></a></li>
-                    <li class="current-page"><a class="nav-home" href="index.html"><span>HOME</span></a></li>
-                    <li class="normal-page"><a class="nav-blog" href="blog.html"><span>BLOG</span></a></li>
-                    <li class="normal-page"><a class="nav-portfolio" href="portfolio.html"><span>PORTFOLIO</span></a></li>
-                </ul>
+                @Html.Partial("~/Views/Shared/_Menu.cshtml", null)
 
-                <div class="maintitle">
-                    <h1>Hadi Wirontono</h1>
-                    <div class="mainsubtitle">{software engineer}</div>
-                </div>
-
-                <div class="separator"></div>
+                
                 
                 @RenderBody()
                 

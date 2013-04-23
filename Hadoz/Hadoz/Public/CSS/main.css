@@ -54,10 +54,10 @@
 	body {
 		position: relative;
 		margin: 0;
-		padding: 50px 0 0;
+		/*padding: 50px 0 0;*/
 		height: 100%;
 		min-height: 100%;
-		background: #9e3c30 url(../images/background.jpg);
+		background: #9e3c30 url(../images/background_leather_black.jpg);
 		color: #333;
 		font: 14px/24px;
 		font-family: 'Open Sans', Tahoma, Verdana, sans-serif;
@@ -180,7 +180,7 @@
 
 	.separator {
 		height: 10px;
-		background-image: url(../images/separator_01.png);
+		background-image: url(../images/separator_03.png);
 	}
 
 	.separator-small {
@@ -265,11 +265,11 @@
     }
 		        
 	.normal-page .nav-aboutme {
-		background: url(../images/nav_icon_aboutme_w.png) -188px 0;
+		background: url(../images/nav_icon_aboutme.png) -188px 0;
 	}
 
 	.normal-page .nav-aboutme:hover {
-		background: url(../images/nav_icon_aboutme_w.png) -94px 0;
+		background: url(../images/nav_icon_aboutme.png) -94px 0;
 	}
 
 	.normal-page .nav-home {
@@ -1692,7 +1692,7 @@
 
 	.footer {
 		position: absolute;
-		bottom: -65px;
+		/*bottom: -65px;*/
 		left: 50%;
 		z-index: -5;
 		margin-left: -82px;
