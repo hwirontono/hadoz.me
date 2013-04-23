@@ -1,0 +1,9 @@
+    body {
+        background: #cb7800 url(../../images/themes/background_leather_orange.jpg);
+    }
+
+    .container {
+        -webkit-box-shadow: 2px 0 10px rgba(59,32,0,0.75);
+        -moz-box-shadow: 2px 0 10px rgba(59,32,0,0.75); 
+        box-shadow: 2px 0 10px rgba(59,32,0,0.75);
+    }

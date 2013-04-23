@@ -5,7 +5,7 @@
 
 body 
 {
-    background-image:url('../../Public/Images/background-body.png');   
+    background-image:url('../images/background-body.png');   
 }
 
 #wrap {
@@ -19,13 +19,6 @@ body
     max-width: 1000px;
 }
 
-#footer {
-    background-color: #F5F5F5;
-}
-
-#push, #footer {
-    height: 60px;
-}
 
 
 .clearfix:after, .section:after, .fixed:after, .row:after {
@@ -64,4 +57,10 @@ body
     margin: 5px;
     padding: 5px;
     width: 120px;
+}
+
+
+.hide
+{
+	display: none;
 }

@@ -1,0 +1,9 @@
+    body {
+        background: #a23e03 url(../../images/themes/background_orange_dark.jpg);
+    }
+
+    .container {
+        -webkit-box-shadow: 2px 0 10px rgba(59,32,0,0.75);
+        -moz-box-shadow: 2px 0 10px rgba(59,32,0,0.75); 
+        box-shadow: 2px 0 10px rgba(59,32,0,0.75);
+    }

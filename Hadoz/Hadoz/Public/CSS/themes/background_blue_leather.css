@@ -1,0 +1,9 @@
+    body {
+        background: #3483ac url(../../images/themes/background_leather_blue.jpg);
+    }
+
+    .container {
+        -webkit-box-shadow: 2px 0 10px rgba(0,56,85,0.75);
+        -moz-box-shadow: 2px 0 10px rgba(0,56,85,0.75); 
+        box-shadow: 2px 0 10px rgba(0,56,85,0.75);
+    }

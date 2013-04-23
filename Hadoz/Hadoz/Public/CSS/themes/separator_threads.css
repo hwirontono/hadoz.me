@@ -1,0 +1,45 @@
+	.separator {
+		height: 16px;
+		background-image: url(../../images/themes/separator_02.png);
+	}
+
+	.separator-small {
+		height: 3px;
+		background-image: url(../../images/themes/separator_02s.png);
+	}
+
+	.comment {
+        border-top: 3px solid #bbb;
+ 		-webkit-border-image: url(../../images/themes/separator_02s.png) 3 0 0 round;
+        -moz-border-image: url(../../images/themes/separator_02s.png) 3 0 0 round;
+ 		-o-border-image: url(../../images/themes/separator_02s.png) 3 0 0 round;
+        border-image: url(../../images/themes/separator_02s.png) 3 0 0 round;
+    }
+
+    .comment .children .comment {
+    	border-top: 3px solid #bbb;
+    }
+
+    .w-categories li {
+        border-bottom: 3px solid rgba(0,0,0,0);
+ 		-webkit-border-image: url(../../images/themes/separator_02s.png) 0 0 3 round;
+        -moz-border-image: url(../../images/themes/separator_02s.png) 0 0 3 round;
+ 		-o-border-image: url(../../images/themes/separator_02s.png) 0 0 3 round;
+        border-image: url(../../images/themes/separator_02s.png) 0 0 3 round;
+    }
+
+    .ui-tabs .ui-tabs-panel .posts li {
+        border-bottom: 3px solid rgba(0,0,0,0);
+ 		-webkit-border-image: url(../../images/themes/separator_02s.png) 0 0 3 round;
+        -moz-border-image: url(../../images/themes/separator_02s.png) 0 0 3 round;
+ 		-o-border-image: url(../../images/themes/separator_02s.png) 0 0 3 round;
+        border-image: url(../../images/themes/separator_02s.png) 0 0 3 round;
+    }
+
+    .accordion-button {
+        border-top: 3px solid rgba(0,0,0,0);
+ 		-webkit-border-image: url(../../images/themes/separator_02s.png) 3 0 0 round;
+        -moz-border-image: url(../../images/themes/separator_02s.png) 3 0 0 round;
+ 		-o-border-image: url(../../images/themes/separator_02s.png) 3 0 0 round;
+        border-image: url(../../images/themes/separator_02s.png) 3 0 0 round;
+    }

@@ -1,0 +1,16 @@
+	.navigation li a span {
+		background: url(../../images/themes/ribbon_slide_red.png) top right;
+		box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+		color: #560101;
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+		font-weight: 600;	
+	}
+
+	.footer {
+		background: url(../../images/themes/ribbon_slide_red.png) no-repeat;
+		color: #d9968d;
+	}
+
+	.footer p {
+		color: #d9968d;
+	}
