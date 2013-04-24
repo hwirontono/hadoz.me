@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hadoz", "Hadoz\Hadoz.csproj", "{EB3B3EFD-397E-48ED-B90F-3D460F30BCBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HadozBusinessApplication", "HadozBusinessApplication\HadozBusinessApplication.csproj", "{23A95A99-8C3E-44B6-8F95-E2FBC8A3D4E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HadozDataLayerApplication", "HadozDataLayerApplication\HadozDataLayerApplication.csproj", "{B2EF6216-8EB7-46B3-8578-9FC11EBBA67A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HadozDataModel", "HadozDataModel\HadozDataModel.csproj", "{5E0B8948-9F92-4120-B8A7-C34BAD7E89A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HadozViewModel", "HadozViewModel\HadozViewModel.csproj", "{2313EB3B-155D-4A9C-AFFB-894681FAEC43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +21,22 @@ Global
 		{EB3B3EFD-397E-48ED-B90F-3D460F30BCBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB3B3EFD-397E-48ED-B90F-3D460F30BCBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB3B3EFD-397E-48ED-B90F-3D460F30BCBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A95A99-8C3E-44B6-8F95-E2FBC8A3D4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A95A99-8C3E-44B6-8F95-E2FBC8A3D4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A95A99-8C3E-44B6-8F95-E2FBC8A3D4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A95A99-8C3E-44B6-8F95-E2FBC8A3D4E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2EF6216-8EB7-46B3-8578-9FC11EBBA67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2EF6216-8EB7-46B3-8578-9FC11EBBA67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2EF6216-8EB7-46B3-8578-9FC11EBBA67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2EF6216-8EB7-46B3-8578-9FC11EBBA67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E0B8948-9F92-4120-B8A7-C34BAD7E89A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E0B8948-9F92-4120-B8A7-C34BAD7E89A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E0B8948-9F92-4120-B8A7-C34BAD7E89A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E0B8948-9F92-4120-B8A7-C34BAD7E89A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2313EB3B-155D-4A9C-AFFB-894681FAEC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2313EB3B-155D-4A9C-AFFB-894681FAEC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2313EB3B-155D-4A9C-AFFB-894681FAEC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2313EB3B-155D-4A9C-AFFB-894681FAEC43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

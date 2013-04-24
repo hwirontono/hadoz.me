@@ -1,0 +1,5 @@
+C:\git2\hadoz.me\Hadoz\HadozDataModel\bin\Debug\HadozDataModel.dll
+C:\git2\hadoz.me\Hadoz\HadozDataModel\bin\Debug\HadozDataModel.pdb
+C:\git2\hadoz.me\Hadoz\HadozDataModel\obj\Debug\ResolveAssemblyReference.cache
+C:\git2\hadoz.me\Hadoz\HadozDataModel\obj\Debug\HadozDataModel.dll
+C:\git2\hadoz.me\Hadoz\HadozDataModel\obj\Debug\HadozDataModel.pdb
