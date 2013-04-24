@@ -1,112 +1,30 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "About Me";
 }
+<div id="aboutme">
 
-<div class="maintitle">
-    <h1>About Me</h1>
-</div>
-<div class="separator"></div>
-<!-- EasyTabs navigation -->
-<ul class="subnavigation">
-    <li class="tabs"><a href="#main-info" class="nav-aboutme" ><span>Main</span></a></li>
-    <li class="tabs"><a href="#resume" class="nav-aboutme"><span>Resume</span></a></li>
-    <li class="tabs"><a href="#contact" class="nav-aboutme" ><span>Contact</span></a></li>
-    <li class="tabs"><a href="#regular-page" class="nav-aboutme" ><span>Regular page</span></a></li>
-</ul><!-- /EasyTabs navigation -->
-<div class="separator"></div>
+    <div class="maintitle"><h1>About Me</h1></div>
 
-<!-- EasyTab MAIN -->
-<div id="main-info">
-<div class="right-column">
-    <img src="images/photocontent/photo_about_me.jpg" alt="">
-</div>
-<div class="left-column">
-    <h2>Information</h2>
-    <ul class="main-info-list">
-        <li>Name<span>Christina Summer</span></li>
-        <li>Date of Birth<span>November 16, 1986</span></li>
-        <li>Address<span>New York City, United States</span></li>
-        <li>Profession<span>Designer</span></li>
-        <li>Phone<span>+0 (123) 456 789</span></li>
-        <li>Email<span>summer@mail.com</span></li>
-        <li>Website<span>www.summer.com</span></li>
-    </ul>
-</div>
-<div class="floatlimit"></div>
-</div><!-- /EasyTab MAIN -->
+    <div class="separator"></div>
 
-<!-- EasyTab RESUME -->
-<div id="resume">
-<div class="right-column">
-    <div class="skills">
-        <h2>Skills</h2>
-        <h3>Design</h3>
-        <div class="skill-5"></div>
-        <h3>Develope</h3>
-        <div class="skill-4"></div>
-        <h3>Photo</h3>
-        <div class="skill-3"></div>
-        <h3>Animation</h3>
-        <div class="skill-2"></div>
-    </div>
-</div>
-<div class="left-column">
-    <h2>Employment</h2>
+    <!-- EasyTabs navigation -->
+    <ul class="subnavigation">
+        <li class="tabs"><a href="#main-info" class="nav-aboutme" ><span>Main</span></a></li>
+        <li class="tabs"><a href="#resume" class="nav-aboutme"><span>Resume</span></a></li>
+        <li class="tabs"><a href="#contact" class="nav-aboutme" ><span>Contact</span></a></li>
+    </ul><!-- /EasyTabs navigation -->
+    
+    <div class="separator"></div>
 
-    <h3>Web Developer</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus.</p><br>
-    <h3>Designer</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas.</p><br><br><br>
-                            
-    <h2>Education</h2>
-    <h3>Art Design</h3>
-    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-</div>
-<div class="floatlimit"></div>
-</div><!-- /EasyTab RESUME -->
+    @Html.Partial("~/Views/AboutMe/_MainContact.cshtml", null)
+    @Html.Partial("~/Views/AboutMe/_Resume.cshtml", null)
+    @Html.Partial("~/Views/AboutMe/_ContactMe.cshtml", null)
 
-<!-- EasyTab CONTACT -->
-<div id="contact">
-<div id="gmap"></div> <!-- Google map -->
- 
-<div class="separator"></div>
-
-<div class="right-column">
-    <div class="clip"></div>
-    <ul class="contact-list">
-        <li><div class="ci-03"></div>New York City, United States</li>
-        <li><div class="ci-05"></div>+0 (123) 456 789</li>
-        <li><div class="ci-06"></div>summer@mail.com</li>
-        <li><div class="ci-01"></div>specific information</li>
-        <li><div class="ci-02"></div>more specific information</li>
-        <li><div class="ci-07"></div>more specific information</li>
-    </ul>
 </div>
 
-<div class="left-column">
-    <form action="#" id="contactform">
-        <br><h2>Contact me</h2>
-        <ul>
-            <li>
-                <label for="name" class="flabel">Name</label>
-                <input type="text" name="name" value="" id="name" />
-            </li>
-            <li>
-                <label for="email" class="flabel">E-mail</label>
-                <input type="text" name="email" value="" id="email" />
-            </li>
-            <li>
-                <label for="message" class="flabel">Enter your message</label>
-                <textarea name="message" cols="88" rows="6" id="message"></textarea>
-            </li>
-            <li>
-                <button type="submit" name="submit" value="Send your message" class="submit">Send your message</button>
-            </li>
-        </ul>
-    </form>
-</div>
-</div><!-- /EasyTab CONTACT -->
 
+<script src="~/Public/js/jquery.hashchange.min.js"></script>
+<script src="~/Public/js/jquery.infieldlabel.min.js"></script>
 <script src="~/Public/js/gmap3.min.js"></script>
 <script src="~/Public/js/jquery.easytabs.min.js"></script>
 <script src="~/Public/js/page.about.js"></script>

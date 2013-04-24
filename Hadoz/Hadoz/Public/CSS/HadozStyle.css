@@ -37,6 +37,34 @@ body
     margin: 0 auto;
 }
 
+.job-title
+{
+    color: #e75330;
+}
+.task-point
+{
+    padding-left: 10px;
+    border-left: 1px solid #e75330;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.task-point p 
+{
+    padding-bottom: 10px;
+}
+
+.skill-title
+{
+   color: #e75330;
+}
+
+.skill-labels
+{
+    width: 200px;
+    padding-bottom: 25px;
+}
+
 
 
 .col1 {

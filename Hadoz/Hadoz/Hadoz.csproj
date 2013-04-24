@@ -444,8 +444,15 @@
     <Content Include="Public\images\w_icon_accordion.png" />
     <Content Include="Public\images\w_icon_tag.png" />
     <Content Include="Public\images\w_icon_tweet.png" />
+    <Content Include="Public\js\gmap3.min.js" />
+    <Content Include="Public\js\jquery.easytabs.min.js" />
     <Content Include="Public\js\jquery.flexslider-min.js" />
+    <Content Include="Public\js\jquery.hashchange.min.js" />
+    <Content Include="Public\js\jquery.infieldlabel.min.js" />
+    <Content Include="Public\js\page.about.js" />
     <Content Include="Public\js\page.main.js" />
+    <Content Include="Public\js\page.portfolio.js" />
+    <Content Include="Public\js\page.search.js" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -498,6 +505,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Portfolio\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AboutMe\_MainContact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AboutMe\_Resume.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AboutMe\_ContactMe.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
