@@ -1,1 +1,8 @@
 C:\git2\hadoz.me\Hadoz\HadozViewModel\obj\Debug\ResolveAssemblyReference.cache
+C:\Hadoz.me\hadoz.me\Hadoz\HadozViewModel\obj\Debug\ResolveAssemblyReference.cache
+C:\Hadoz.me\hadoz.me\Hadoz\HadozViewModel\bin\Debug\HadozViewModel.dll
+C:\Hadoz.me\hadoz.me\Hadoz\HadozViewModel\bin\Debug\HadozViewModel.pdb
+C:\Hadoz.me\hadoz.me\Hadoz\HadozViewModel\bin\Debug\HadozDataModel.dll
+C:\Hadoz.me\hadoz.me\Hadoz\HadozViewModel\bin\Debug\HadozDataModel.pdb
+C:\Hadoz.me\hadoz.me\Hadoz\HadozViewModel\obj\Debug\HadozViewModel.dll
+C:\Hadoz.me\hadoz.me\Hadoz\HadozViewModel\obj\Debug\HadozViewModel.pdb

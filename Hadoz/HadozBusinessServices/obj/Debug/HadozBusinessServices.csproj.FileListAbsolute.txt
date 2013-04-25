@@ -1,0 +1,11 @@
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\obj\Debug\ResolveAssemblyReference.cache
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\bin\Debug\HadozBusinessServices.dll
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\bin\Debug\HadozBusinessServices.pdb
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\bin\Debug\HadozDataAccessServices.dll
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\bin\Debug\HadozDataModel.dll
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\bin\Debug\HadozViewModel.dll
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\bin\Debug\HadozDataAccessServices.pdb
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\bin\Debug\HadozDataModel.pdb
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\bin\Debug\HadozViewModel.pdb
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\obj\Debug\HadozBusinessServices.dll
+C:\Hadoz.me\hadoz.me\Hadoz\HadozBusinessServices\obj\Debug\HadozBusinessServices.pdb

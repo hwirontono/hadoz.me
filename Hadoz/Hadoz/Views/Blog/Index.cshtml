@@ -12,70 +12,23 @@
 
 <!-- Blog -->
 <div class="blog">
-    <div class="post">
-        <h2><a href="blog_post.html">Wellios Blog</a></h2>
-        <div class="post-meta">
-            <span class="author">By <a href="#">Christina Summer</a></span><br>
-            <span class="date">January 1st, 2013</span><br>
-            <span class="comments">Comments: <a href="#">35</a></span><br>
-            <span class="metatags"><a href="#">Browsers</a>, <a href="#">Internet Explorer</a>, <a href="#">Web</a></span>
-        </div>
-        <div class="post-entry">
-            <a href="blog_post.html" title=""><img src="images/photocontent/blog_01.jpg" alt="" class="image" /></a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus.</p>
-            <blockquote>
-                I am always doing that which I can not do, in order that I may learn how to do it.
-                <div class="person">Pablo Picasso</div>
-                <div class="floatlimit"></div>
-            </blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas.</p>
-            <a href="blog_post.html"><div class="readmore">Read more</div></a>
-        </div>
-    </div>
-    <div class="post">
-        <h2><a href="blog_post.html">Post with Photo</a></h2>
-        <div class="post-meta">
-            <span class="author">By <a href="#">Christina Summer</a></span><br>
-            <span class="date">January 1st, 2013</span><br>
-            <span class="comments">Comments: <a href="#">none</a></span><br>
-            <span class="metatags"><a href="#">Browsers</a>, <a href="#">Photography</a>, <a href="#">Art</a></span>
-        </div>
-        <div class="post-entry">
-            <a href="blog_post.html" title=""><img src="images/photocontent/blog_02.jpg" alt="" class="image" /></a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus.</p>
-            <a href="blog_post.html"><div class="readmore">Read more</div></a>
-        </div>
-    </div>
-    <div class="post">
-        <h2><a href="blog_post.html">Simple Post</a></h2>
-        <div class="post-meta">
-            <span class="author">By <a href="#">Christina Summer</a></span><br>
-            <span class="date">January 1st, 2013</span><br>
-            <span class="comments">Comments: <a href="#">none</a></span><br>
-            <span class="metatags"><a href="#">Browsers</a>, <a href="#">Photography</a>, <a href="#">Art</a></span>
-        </div>
-        <div class="post-entry">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus. Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus.</p>
-            <a href="blog_post.html"><div class="readmore">Read more</div></a>
-        </div>
-    </div>
-    <div class="post">
-        <h2><a href="blog_post.html">Post with Video</a></h2>
-        <div class="post-meta">
-            <span class="author">By <a href="#">Christina Summer</a></span><br>
-            <span class="date">January 1st, 2013</span><br>
-            <span class="comments">Comments: <a href="#">none</a></span><br>
-            <span class="metatags"><a href="#">Browsers</a>, <a href="#">Photography</a>, <a href="#">Art</a></span>
-        </div>
-        <div class="post-entry">
-            <div class="video">
-                <iframe src="http://player.vimeo.com/video/25927524?title=0&amp;byline=0&amp;portrait=0" width="460" height="259" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus. Lorem ipsum dolor sit amet, consectetur adipiscingVivamus sit amet ligula non lectus cursus egestas. Cras erat lorem, fringilla quis sagittis in, sagittis inNam leo tortor Nam leo tortor Vivamus.</p>
-            <a href="blog_post.html"><div class="readmore">Read more</div></a>
-        </div>
-    </div>                 
 
+    <div data-bind="foreach: BlogPosts">
+        <div class="post">
+            <h2><a href="#" data-bind="text: Title"></a></h2>
+            <div class="post-meta">
+                <span class="author">By <a href="#">Christina Summer</a></span><br>
+                <span class="date" data-bind="text: CreateDate"></span><br>
+                <span class="comments">Comments: <a href="#">35</a></span><br>
+                <span class="metatags"><a href="#">Browsers</a>, <a href="#">Internet Explorer</a>, <a href="#">Web</a></span>
+            </div>
+            <div class="post-entry">
+                <div data-bind="text: Body"></div>
+                <a href="blog_post.html"><div class="readmore">Read more</div></a>
+            </div>
+        </div>
+    </div>
+    
     <div class="separator-small"></div>
 
     <!-- Pagination -->
@@ -91,3 +44,56 @@
 </div><!-- /Blog -->
 
 <div class="floatlimit"></div>
+
+<script type="text/javascript">
+
+    var BlogPost = function (PostID, Title, Body, Excerpt, CreateDate, UpdateDate, Status, AuthorID, Categories, Tags) {
+        var self = this;
+        
+        self.PostID = ko.observable(PostID);
+        self.Title = ko.observable(Title);
+        self.Body = ko.observable(Body);
+        self.Excerpt = ko.observable(Excerpt);
+        self.CreateDate = ko.observable(CreateDate);
+        self.UpdateDate = ko.observable(UpdateDate);
+        self.Status = ko.observable(Status);
+        self.AuthorID = ko.observable(AuthorID);
+        self.Categories = ko.observableArray(Categories);
+        self.Tags = ko.observableArray(Tags);
+    };
+
+    var BlogPostViewModel = function () {
+        var self = this;
+
+        self.BlogPosts = new ko.observableArray();
+
+        self.getBlogPosts = function () {
+            var url = '@Url.Action("GetAllBlogPosts", "Blog")';
+            $.post(url, function (data, textStatus) {
+                //console.log(data);
+                $.each(data.BlogPosts, function (key) {
+                    self.BlogPosts.push(new BlogPost(
+                        data.BlogPosts[key].PostID,
+                        data.BlogPosts[key].Title,
+                        data.BlogPosts[key].Body,
+                        data.BlogPosts[key].Excerpt,
+                        data.BlogPosts[key].CreateDate,
+                        data.BlogPosts[key].UpdateDate,
+                        data.BlogPosts[key].Status,
+                        data.BlogPosts[key].AuthorID,
+                        data.BlogPosts[key].Categories,
+                        data.BlogPosts[key].Tags
+                    ));
+                });
+
+                //console.log(self.BlogPosts());
+            });
+        };
+    };
+
+    $(function () {
+        var bpvm = new BlogPostViewModel();
+        bpvm.getBlogPosts();
+        ko.applyBindings(bpvm);
+    });
+</script>

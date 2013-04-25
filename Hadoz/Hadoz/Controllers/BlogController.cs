@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using HadozBusinessServices;
+using HadozViewModel;
+
 namespace Hadoz.Controllers
 {
     public class BlogController : Controller
@@ -16,5 +19,12 @@ namespace Hadoz.Controllers
             return View();
         }
 
+        [HttpPost()]
+        public ActionResult GetAllBlogPosts()
+        {
+            BlogPostBusinessService bpBS = new BlogPostBusinessService();
+            BlogPostViewModel bpVM = bpBS.DisplayAllBlogPosts();
+            return Json(bpVM);
+        }
     }
 }

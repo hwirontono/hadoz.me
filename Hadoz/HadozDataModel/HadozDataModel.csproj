@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlogPostDataModel.cs" />
+    <Compile Include="BlogAuthor.cs" />
+    <Compile Include="BlogCategory.cs" />
+    <Compile Include="BlogComment.cs" />
+    <Compile Include="BlogPost.cs" />
+    <Compile Include="BlogPostMetaTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
