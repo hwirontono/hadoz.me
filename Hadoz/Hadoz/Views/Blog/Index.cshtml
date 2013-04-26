@@ -17,13 +17,15 @@
         <div class="post">
             <h2><a href="#" data-bind="text: Title"></a></h2>
             <div class="post-meta">
-                <span class="author">By <a href="#">Christina Summer</a></span><br>
-                <span class="date" data-bind="text: CreateDate"></span><br>
-                <span class="comments">Comments: <a href="#">35</a></span><br>
-                <span class="metatags"><a href="#">Browsers</a>, <a href="#">Internet Explorer</a>, <a href="#">Web</a></span>
+                <span class="author">By <a href="#">Hadi Wirontono</a></span><br/>
+                <span class="date" data-bind="text: CreateDate"></span><br/>
+                <span class="comments">Comments: <a href="#">35</a></span><br/>
+                <span class="metatags" data-bind="foreach: Tags">
+                    <a href="#" data-bind="text: TagKey"> </a><span data-bind="visible: $index() < $parent.Tags().length - 1">,</span>
+                </span>
             </div>
             <div class="post-entry">
-                <div data-bind="text: Body"></div>
+                <div data-bind="html: Body"></div>
                 <a href="blog_post.html"><div class="readmore">Read more</div></a>
             </div>
         </div>
@@ -49,7 +51,7 @@
 
     var BlogPost = function (PostID, Title, Body, Excerpt, CreateDate, UpdateDate, Status, AuthorID, Categories, Tags) {
         var self = this;
-        
+
         self.PostID = ko.observable(PostID);
         self.Title = ko.observable(Title);
         self.Body = ko.observable(Body);
@@ -60,6 +62,9 @@
         self.AuthorID = ko.observable(AuthorID);
         self.Categories = ko.observableArray(Categories);
         self.Tags = ko.observableArray(Tags);
+        self.CountOfTag = ko.computed(function () {
+            return self.Tags().length - 1;
+        });
     };
 
     var BlogPostViewModel = function () {

@@ -288,7 +288,11 @@
     <Content Include="Public\images\search_icon.png" />
     <Content Include="Public\images\separator_01.png" />
     <Content Include="Public\images\separator_01s.png" />
+    <Content Include="Public\images\separator_02s.png" />
     <Content Include="Public\images\separator_03.png" />
+    <Content Include="Public\images\separator_03s.png" />
+    <Content Include="Public\images\separator_04.png" />
+    <Content Include="Public\images\separator_04s.png" />
     <Content Include="Public\images\skills.png" />
     <Content Include="Public\images\small_icons.png" />
     <Content Include="Public\images\social_icons.png" />

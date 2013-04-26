@@ -34,8 +34,8 @@ namespace HadozDataAccessServices
                                       reader.GetString(reader.GetOrdinal("Title")),
                                       reader.GetString(reader.GetOrdinal("Body")),
                                       reader.GetString(reader.GetOrdinal("Excerpt")),
-                                      reader.GetDateTime(reader.GetOrdinal("CreateDate")),
-                                      reader.GetDateTime(reader.GetOrdinal("UpdateDate")),
+                                      reader.GetDateTime(reader.GetOrdinal("CreateDate")).ToLongDateString(),
+                                      reader.GetDateTime(reader.GetOrdinal("UpdateDate")).ToLongDateString(),
                                       reader.GetInt32(reader.GetOrdinal("Status")),
                                       reader.GetInt32(reader.GetOrdinal("AuthorID")));
                     blogPosts.Add(bp);
@@ -100,7 +100,7 @@ namespace HadozDataAccessServices
         public List<BlogPostMetaTag> GetTagsForAPost(int PostID)
         {
             SqlConnection conn = new SqlConnection(Database.HadozDB());
-            SqlCommand command = new SqlCommand("Blog_GetTagsForAPost", conn);
+            SqlCommand command = new SqlCommand("Blog_GetMetaTagsForAPost", conn);
 
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@PostID", SqlDbType.Int).Value = PostID;
@@ -117,6 +117,7 @@ namespace HadozDataAccessServices
                 while (reader.Read())
                 {
                     bt = new BlogPostMetaTag(reader.GetInt32(reader.GetOrdinal("TagID")),
+                                             reader.GetInt32(reader.GetOrdinal("PostID")),
                                              reader.GetString(reader.GetOrdinal("TagKey")),
                                              reader.GetString(reader.GetOrdinal("TagValue")));
                     blogTags.Add(bt);
