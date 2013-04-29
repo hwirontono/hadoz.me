@@ -108,3 +108,11 @@ C:\Hadoz.me\hadoz.me\Hadoz\Hadoz\bin\HadozBusinessServices.pdb
 C:\Hadoz.me\hadoz.me\Hadoz\Hadoz\bin\HadozDataModel.pdb
 C:\Hadoz.me\hadoz.me\Hadoz\Hadoz\bin\HadozViewModel.pdb
 C:\Hadoz.me\hadoz.me\Hadoz\Hadoz\bin\HadozDataAccessServices.pdb
+C:\git\hadoz.me\Hadoz\Hadoz\bin\HadozBusinessServices.dll
+C:\git\hadoz.me\Hadoz\Hadoz\bin\HadozDataModel.dll
+C:\git\hadoz.me\Hadoz\Hadoz\bin\HadozViewModel.dll
+C:\git\hadoz.me\Hadoz\Hadoz\bin\HadozDataAccessServices.dll
+C:\git\hadoz.me\Hadoz\Hadoz\bin\HadozBusinessServices.pdb
+C:\git\hadoz.me\Hadoz\Hadoz\bin\HadozDataModel.pdb
+C:\git\hadoz.me\Hadoz\Hadoz\bin\HadozViewModel.pdb
+C:\git\hadoz.me\Hadoz\Hadoz\bin\HadozDataAccessServices.pdb

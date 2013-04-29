@@ -45,7 +45,33 @@
 
 </div><!-- /Blog -->
 
+<!--Widgets -->
+<div class="widgetside">
+    <!-- Search Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetSearch.cshtml", null)
+
+    <!-- Blog Categories Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetCategories.cshtml", null)
+
+    <!-- Text Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetText.cshtml", null)
+
+    <!-- Tabs Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetTabs.cshtml", null)
+
+    <!-- Accordion Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetAccordion.cshtml", null)
+
+    <!-- Twitter Feed Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetTwitterFeed.cshtml", null)
+
+    <!-- Photo Stream Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetFlickrFeed.cshtml", null)
+</div><!--/Widgets -->
+
+
 <div class="floatlimit"></div>
+
 
 <script type="text/javascript">
 

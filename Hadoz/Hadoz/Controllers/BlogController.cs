@@ -19,6 +19,13 @@ namespace Hadoz.Controllers
             return View();
         }
 
+        public ActionResult BlogPost()
+        {
+            BlogPostBusinessService bpBS = new BlogPostBusinessService();
+            BlogPostViewModel bpVM = bpBS.DisplayAllBlogPosts();
+            return Json(bpVM);
+        }
+
         [HttpPost()]
         public ActionResult GetAllBlogPosts()
         {
