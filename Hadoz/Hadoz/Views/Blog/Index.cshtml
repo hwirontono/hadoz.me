@@ -1,5 +1,11 @@
-﻿@{
+﻿@using System.Collections;
+@using System.Collections.Generic;
+@using HadozDataModel;
+
+@{
     ViewBag.Title = "Blog - Beyond The Gray Area";
+    
+    //List<BlogPost> bps = Model.BlogPosts;
 }
 
 <div class="maintitle">
@@ -9,6 +15,9 @@
 
 <div class="separator"></div>
 
+<div id="OrderDetailsData" style="visibility: hidden; display: none">
+    @Html.Raw(Json.Encode(Model.BlogPosts));
+</div>
 
 <!-- Blog -->
 <div class="blog">
@@ -99,26 +108,44 @@
         self.BlogPosts = new ko.observableArray();
 
         self.getBlogPosts = function () {
-            var url = '@Url.Action("GetAllBlogPosts", "Blog")';
-            $.post(url, function (data, textStatus) {
-                //console.log(data);
-                $.each(data.BlogPosts, function (key) {
-                    self.BlogPosts.push(new BlogPost(
-                        data.BlogPosts[key].PostID,
-                        data.BlogPosts[key].Title,
-                        data.BlogPosts[key].Body,
-                        data.BlogPosts[key].Excerpt,
-                        data.BlogPosts[key].CreateDate,
-                        data.BlogPosts[key].UpdateDate,
-                        data.BlogPosts[key].Status,
-                        data.BlogPosts[key].AuthorID,
-                        data.BlogPosts[key].Categories,
-                        data.BlogPosts[key].Tags
+            initialLineItems = jsonParse($("#OrderDetailsData").text());
+
+            $.each(initialLineItems, function (key) {
+                self.BlogPosts.push(new BlogPost(
+                        initialLineItems[key].PostID,
+                        initialLineItems[key].Title,
+                        initialLineItems[key].Body,
+                        initialLineItems[key].Excerpt,
+                        initialLineItems[key].CreateDate,
+                        initialLineItems[key].UpdateDate,
+                        initialLineItems[key].Status,
+                        initialLineItems[key].AuthorID,
+                        initialLineItems[key].Categories,
+                        initialLineItems[key].Tags
                     ));
-                });
+            });
+
+//           
+//            var url = '@Url.Action("GetAllBlogPosts", "Blog")';
+//            $.post(url, function (data, textStatus) {
+//                //console.log(data);
+//                $.each(data.BlogPosts, function (key) {
+//                    self.BlogPosts.push(new BlogPost(
+//                        data.BlogPosts[key].PostID,
+//                        data.BlogPosts[key].Title,
+//                        data.BlogPosts[key].Body,
+//                        data.BlogPosts[key].Excerpt,
+//                        data.BlogPosts[key].CreateDate,
+//                        data.BlogPosts[key].UpdateDate,
+//                        data.BlogPosts[key].Status,
+//                        data.BlogPosts[key].AuthorID,
+//                        data.BlogPosts[key].Categories,
+//                        data.BlogPosts[key].Tags
+//                    ));
+//                });
 
                 //console.log(self.BlogPosts());
-            });
+//            });
         };
     };
 

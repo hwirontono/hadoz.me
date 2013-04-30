@@ -16,14 +16,19 @@ namespace Hadoz.Controllers
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult BlogPost()
-        {
             BlogPostBusinessService bpBS = new BlogPostBusinessService();
             BlogPostViewModel bpVM = bpBS.DisplayAllBlogPosts();
-            return Json(bpVM);
+            return View("Index", bpVM);
+        }
+
+        public ActionResult BlogPost(int PostID)
+        {
+            //Server.HtmlEncode(PostID);
+            BlogPostBusinessService bpBS = new BlogPostBusinessService();
+            BlogPostViewModel bpVM = bpBS.DisplayAllBlogPosts();
+
+
+            return Json(bpVM.BlogPosts);
         }
 
         [HttpPost()]
