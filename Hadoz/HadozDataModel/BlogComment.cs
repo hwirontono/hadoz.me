@@ -12,13 +12,15 @@ namespace HadozDataModel
         public string CommentAuthor { get; set; }
         public string CommentAuthorEmail { get; set; }
         public string CommentAuthorIP { get; set; }
-        public DateTime CommentDate { get; set; }
+        public string CommentDate { get; set; }
         public string CommentBody { get; set; }
         public bool IsApproved { get; set; }
         public int CommentStatus { get; set; }
+        public int Parent { get; set; }
 
         public BlogComment(int CommentID, int PostID, string CommentAuthor, string CommentAuthorEmail, 
-                                string CommentAuthorIP, DateTime CommentDate, string CommentBody, bool IsApproved, int CommentStatus)
+                           string CommentAuthorIP, string CommentDate, string CommentBody, 
+                           bool IsApproved, int CommentStatus, int Parent)
         {
             this.CommentID = CommentID;
             this.PostID = PostID;
@@ -29,6 +31,7 @@ namespace HadozDataModel
             this.CommentBody = CommentBody;
             this.IsApproved = IsApproved;
             this.CommentStatus = CommentStatus;
+            this.Parent = Parent;
         }
 
     }

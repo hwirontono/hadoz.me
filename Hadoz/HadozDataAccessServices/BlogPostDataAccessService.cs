@@ -56,6 +56,53 @@ namespace HadozDataAccessServices
             return blogPosts;
         }
 
+
+        public BlogPost GetABlogPost(int PostID)
+        {
+            SqlConnection conn = new SqlConnection(Database.HadozDB());
+            SqlCommand command = new SqlCommand("Blog_GetABlogPost", conn);
+
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@PostID", SqlDbType.Int).Value = PostID;
+
+            BlogPost bp = null;
+            SqlDataReader reader = null;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    bp = new BlogPost(reader.GetInt32(reader.GetOrdinal("PostID")),
+                                      reader.GetString(reader.GetOrdinal("Title")),
+                                      reader.GetString(reader.GetOrdinal("Body")),
+                                      reader.GetString(reader.GetOrdinal("Excerpt")),
+                                      reader.GetDateTime(reader.GetOrdinal("CreateDate")).ToLongDateString(),
+                                      reader.GetDateTime(reader.GetOrdinal("UpdateDate")).ToLongDateString(),
+                                      reader.GetInt32(reader.GetOrdinal("Status")),
+                                      reader.GetInt32(reader.GetOrdinal("AuthorID")));
+                }
+
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                if (conn != null && conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+           
+            return bp;
+        }
+
+
         public List<BlogCategory> GetCategoriesForAPost(int PostID)
         {
             SqlConnection conn = new SqlConnection(Database.HadozDB());
@@ -138,6 +185,57 @@ namespace HadozDataAccessServices
             }
 
             return blogTags;
+        }
+
+
+        public List<BlogComment> GetCommentsForAPost(int PostID)
+        {
+            SqlConnection conn = new SqlConnection(Database.HadozDB());
+            SqlCommand command = new SqlCommand("Blog_GetCommentsForAPost", conn);
+
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@PostID", SqlDbType.Int).Value = PostID;
+
+            BlogComment bc;
+            List<BlogComment> blogComments = new List<BlogComment>();
+            SqlDataReader reader = null;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    bc = new BlogComment(reader.GetInt32(reader.GetOrdinal("CommentID")),
+                                         reader.GetInt32(reader.GetOrdinal("PostID")),
+                                         reader.GetString(reader.GetOrdinal("CommentAuthor")),
+                                         reader.GetString(reader.GetOrdinal("CommentAuthorEmail")),
+                                         reader.GetString(reader.GetOrdinal("CommentAuthorIP")),
+                                         reader.GetDateTime(reader.GetOrdinal("CommentDate")).ToLongDateString(),
+                                         reader.GetString(reader.GetOrdinal("CommentBody")),
+                                         reader.GetBoolean(reader.GetOrdinal("IsApproved")),
+                                         reader.GetInt32(reader.GetOrdinal("CommentStatus")),
+                                         reader.GetInt32(reader.GetOrdinal("Parent")));
+                                         
+                    blogComments.Add(bc);
+                }
+
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                if (conn != null && conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return blogComments;
         }   
 
     }

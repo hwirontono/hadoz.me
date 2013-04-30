@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "BlogPost";
+}
+
+<div class="maintitle">
+    <h1>state of the earthly-minded</h1>
+    <div class="mainsubtitle">begin | freethought | end</div>
+</div>
+
+<div class="separator"></div>
+
+<div id="OrderDetailsData" style="visibility: hidden; display: none">
+    
+</div>
+
+<!-- Blog -->
+<div class="blog">
+
+    <div data-bind="foreach: BlogPosts">
+        <div class="post">
+            <h2><a data-bind="text: Title, attr: {href: '/Blog/BlogPost/' + PostID()}"></a></h2>
+            <div class="post-meta">
+                <span class="author">By <a href="#">Hadi Wirontono</a></span>
+                <span class="date badge badge-inverse" data-bind="text: CreateDate"></span><br/>
+                <span class="comments">Comments: <a href="#">35</a></span><br/>
+                <span class="metatags" data-bind="foreach: Tags">
+                    <a href="#" data-bind="text: TagKey"> </a><span data-bind="visible: $index() < $parent.Tags().length - 1">,</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+ </div><!-- /Blog -->
+
+<!--Widgets -->
+<div class="widgetside">
+    <!-- Search Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetSearch.cshtml", null)
+
+    <!-- Blog Categories Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetCategories.cshtml", null)
+
+    <!-- Text Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetText.cshtml", null)
+
+    <!-- Twitter Feed Widget -->
+    @Html.Partial("~/Views/Blog/_WidgetTwitterFeed.cshtml", null)
+
+</div><!--/Widgets -->
+<div class="floatlimit"></div>
